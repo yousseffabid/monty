@@ -122,7 +122,7 @@ void swap(stack_t **stack, unsigned int line_number)
 
 void add(stack_t **stack, unsigned int line_number)
 {
-	int integer;
+	int sum = 0;
 
 	(void)line_number;
 
@@ -132,9 +132,8 @@ void add(stack_t **stack, unsigned int line_number)
 		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
-	integer = (*stack)->n;
+	sum  = (*stack)->n +  (*stack)->next->n;
+	(*stack)->next->n = sum;
 	pop(stack, line_number);
-	(*stack)->n += (*stack)->n + integer;
-
 }
 
