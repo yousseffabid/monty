@@ -7,8 +7,7 @@
  */
 void sub(stack_t **stack, unsigned int line_number)
 {
-	int sum = 0;
-
+	int sub = 0;
 	(void)line_number;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
@@ -17,7 +16,7 @@ void sub(stack_t **stack, unsigned int line_number)
 		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
-	sum = (*stack)->next->n - (*stack)->n;
-	(*stack)->next->n = sum;
+	sub = (*stack)->next->n - (*stack)->n;
+	(*stack)->next->n = sub;
 	pop(stack, line_number);
 }
