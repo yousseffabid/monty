@@ -3,7 +3,6 @@
 /**
  * valid - checks if th e syntax is valid
  * @function_name: name of the function that can be "push"
- * @data: integer to be pushed if the function is push
  * Return: 0 (function is unknown) on failure and 1 on success
  */
 int valid(char *function_name)
