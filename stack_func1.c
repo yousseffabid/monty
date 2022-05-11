@@ -84,7 +84,7 @@ void pop(stack_t **stack, unsigned int line_number)
 	ptr = *stack;
 	*stack = ptr->next;
 	if (ptr->next != NULL)
-		ptr->next->prev = NULL;
+		ptr->next->prev = ptr->prev;
 	free(ptr);
 }
 
