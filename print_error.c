@@ -9,5 +9,5 @@ void print_error(char *line, unsigned int line_number)
 {
 	(void)line;
 
-	fprintf(stderr, "L%d: unknown instruction\n", line_number);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, line);
 }
