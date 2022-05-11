@@ -9,6 +9,8 @@ int digits(char *data)
 {
 	unsigned int i;
 
+	if (data == NULL)
+		return (0);
 	for (i = 0; data[i] != '\0'; i++)
 	{
 		if (data[0] == '-' && i == 0)
@@ -35,7 +37,7 @@ void push(stack_t **stack, unsigned int line_number)
 
 	if (stack == NULL)
 		return;
-	if (DATA == NULL || !digits(DATA))
+	if (!digits(DATA))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		free_stack(stack);
