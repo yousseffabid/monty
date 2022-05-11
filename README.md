@@ -69,5 +69,5 @@ Comments, indicated with `#`, are not executed by the interpreter.
 When there is no errors, `monty` returns `0`. Otherwise, returns `1`
 
 ## Authors
-* Youssef Abid [GitHub](https://github.com/yousseffabid)
+* Abid Youssef [GitHub](https://github.com/yousseffabid)
 * Jebeniani Aymen [GitHub](https://github.com/Jebeniani)
