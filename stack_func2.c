@@ -10,7 +10,7 @@ void sub(stack_t **stack, unsigned int line_number)
 	int sub = 0;
 	(void)line_number;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+	if (!*stack || !(*stack)->next)
 	{
 		fprintf(stderr, "L%u: can't sub, stack too short\n", line_number);
 		free_stack(stack);
