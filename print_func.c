@@ -2,9 +2,9 @@
 
 /**
  * pall - prints the elements of a linked list
- *
  * @stack: the pointer to stack's first element
  * @line_number: line of the file being processed.
+ * Return: void
  */
 
 void pall(stack_t **stack, unsigned int line_number)
@@ -24,9 +24,9 @@ void pall(stack_t **stack, unsigned int line_number)
 
 /**
  * pint - prints last item of stack
- *
  * @stack: the pointer to the stack
  * @line_number: line of the file being processed.
+ * Return: void
  */
 
 void pint(stack_t **stack, unsigned int line_number)
@@ -42,10 +42,9 @@ void pint(stack_t **stack, unsigned int line_number)
 
 /**
  * nop - doesn't do anything
- *
  * @stack: the pointer to the stack
  * @line_number: line of the file being processed.
- *
+ * Return: void
  */
 
 void nop(stack_t **stack, unsigned int line_number)

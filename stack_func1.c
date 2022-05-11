@@ -24,14 +24,13 @@ int digits(char *data)
 
 /**
  * push - add node at the end of double linked list.
- *
  * @stack: pointer to the first node
  * @line_number: data to populate the node
- * Return: the pointer to the new node
+ * Return: void
  */
 void push(stack_t **stack, unsigned int line_number)
 {
-	stack_t *new;
+	stack_t *new = NULL;
 
 	(void)line_number;
 
@@ -66,9 +65,9 @@ void push(stack_t **stack, unsigned int line_number)
 
 /**
  * pop - removes the last element of a stack
- *
  * @stack: the pointer to the stack
  * @line_number: line of the file being processed.
+ * Return: void
  */
 
 void pop(stack_t **stack, unsigned int line_number)
@@ -91,6 +90,7 @@ void pop(stack_t **stack, unsigned int line_number)
  * swap - swaps the top two elements of the stack
  * @stack: the pointer to the stack
  * @line_number: line of the file being processed.
+ * Return: void
  */
 
 void swap(stack_t **stack, unsigned int line_number)
@@ -115,6 +115,7 @@ void swap(stack_t **stack, unsigned int line_number)
  * add - add top two elements and pop
  * @stack: the pointer to the stack
  * @line_number: line of the file being processed.
+ * Return: void
  */
 
 void add(stack_t **stack, unsigned int line_number)
