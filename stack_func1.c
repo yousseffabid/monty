@@ -53,12 +53,9 @@ void push(stack_t **stack, unsigned int line_number)
 
 	new->n = atoi(DATA);
 	new->prev = NULL;
-	new->next = NULL;
+	new->next = *stack;
 	if (*stack != NULL)
-	{
-		new->next = *stack;
 		(*stack)->prev = new;
-	}
 	*stack = new;
 }
 
@@ -84,7 +81,7 @@ void pop(stack_t **stack, unsigned int line_number)
 	ptr = *stack;
 	*stack = ptr->next;
 	if (ptr->next != NULL)
-		ptr->next->prev = ptr->prev;
+		ptr->next->prev = NULL;
 	free(ptr);
 }
 
