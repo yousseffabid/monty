@@ -35,16 +35,17 @@ void push(stack_t **stack, unsigned int line_number)
 
 	if (stack == NULL)
 		return;
+	if (DATA == NULL || !digits(DATA))
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		free_stack(stack);
+		exit(EXIT_FAILURE);
+	}
+
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
-		free_stack(stack);
-		exit(EXIT_FAILURE);
-	}
-	if (!digits(DATA))
-	{
-		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
