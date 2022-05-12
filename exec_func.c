@@ -11,7 +11,9 @@ void exec_func(char *function_name, unsigned int line_number, stack_t **stack)
 	instruction_t code[] = {{"push", push}, {"pall", pall},
 							{"pop", pop}, {"pint", pint},
 							{"swap", swap}, {"add", add},
-							{"nop", nop}, {NULL, NULL}};
+							{"nop", nop}, {"sub", sub},
+							{"div", _div}, {"mod", _mod},
+							{"mul", mul}, {NULL, NULL}};
 	unsigned int i;
 
 	for (i = 0; code[i].opcode != NULL; i++)

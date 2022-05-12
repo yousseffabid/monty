@@ -110,27 +110,4 @@ void swap(stack_t **stack, unsigned int line_number)
 	(*stack)->next->n = temp;
 }
 
-/**
- * add - add top two elements and pop
- * @stack: the pointer to the stack
- * @line_number: line of the file being processed.
- * Return: void
- */
-
-void add(stack_t **stack, unsigned int line_number)
-{
-	int sum = 0;
-
-	(void)line_number;
-
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-	{
-		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
-		free_stack(stack);
-		exit(EXIT_FAILURE);
-	}
-	sum  = (*stack)->n +  (*stack)->next->n;
-	(*stack)->next->n = sum;
-	pop(stack, line_number);
-}
 
