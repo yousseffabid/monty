@@ -62,6 +62,11 @@ $ ./monty file.m
 | `swap` | Swaps the top two elements of the stack |
 | `add` | Adds the top two elements of the stack |
 | `nop` | Doesn't do anything |
+| `sub` | Subtracts the top element of the stack from the second top element of the stack |
+| `div` | Divides the second top element of the stack by the top element of the stack |
+| `mul` | Multiplies the second top element of the stack with the top element of the stack |
+| `mod` | Computes the rest of the division of the second top element of the stack by the top element of the stack |
+
 
 Comments, indicated with `#`, are not executed by the interpreter.
 
