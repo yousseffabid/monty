@@ -12,8 +12,6 @@ void add(stack_t **stack, unsigned int line_number)
 {
 	int sum = 0;
 
-	(void)line_number;
-
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
@@ -36,8 +34,6 @@ void add(stack_t **stack, unsigned int line_number)
 void sub(stack_t **stack, unsigned int line_number)
 {
 	int subtract = 0;
-
-	(void)line_number;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
@@ -62,8 +58,6 @@ void _div(stack_t **stack, unsigned int line_number)
 {
 	int division = 0;
 
-	(void)line_number;
-
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
@@ -72,7 +66,7 @@ void _div(stack_t **stack, unsigned int line_number)
 	}
 	if ((*stack)->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zeron\n", line_number);
+		fprintf(stderr, "L%d: division by zero\n", line_number);
 		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
@@ -94,8 +88,6 @@ void _mod(stack_t **stack, unsigned int line_number)
 {
 	int modulo = 0;
 
-	(void)line_number;
-
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
@@ -104,7 +96,7 @@ void _mod(stack_t **stack, unsigned int line_number)
 	}
 	if ((*stack)->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zeron\n", line_number);
+		fprintf(stderr, "L%d: division by zero\n", line_number);
 		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
@@ -124,8 +116,6 @@ void mul(stack_t **stack, unsigned int line_number)
 {
 	int multiply = 0;
 
-	(void)line_number;
-
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
@@ -134,7 +124,7 @@ void mul(stack_t **stack, unsigned int line_number)
 	}
 	if ((*stack)->n == 0)
 	{
-		fprintf(stderr, "L%d: division by zeron\n", line_number);
+		fprintf(stderr, "L%d: division by zero\n", line_number);
 		free_stack(stack);
 		exit(EXIT_FAILURE);
 	}
